@@ -1,0 +1,106 @@
+// Global styles/vars for fanhero super admin
+
+
+// Vars
+$red: #bf243a;
+$fhred: #C8102E;
+$white: #ffffff;
+$offwhite: #f8f8f8;
+$tablegrey: #f9f9f9;
+$black: #000000;
+$gunmetal: #513556;
+$dkgrey: #9b9b9b;
+$ltgrey: #a1a1a1;
+$bdgrey: #e3e3e3;
+$grey: #4a4a4a;
+$btn-dark-grey: #9b9b9b;
+$blue-grey: #2f343a;
+$pale-grey: #f1f3f4;
+$hvgrey: #41464d;
+$green: #87cd40;
+$bdgreen: #52AA5E;
+$teal: #009688;
+$blue: #4A90E2;
+$ltblue: #62bcef;
+$aqua: #a5ffe7;
+$dkblue: #5788c1;
+$orange: #f5a623;
+$dkorange: #ff6008;
+$purple: #68228b;
+$purple-border: #964bd1;
+$form-focus: #66afe9;
+$box-shadow: #b7c1cb;
+
+// Functional Components
+@import './mixins/transitions';
+
+// Partials
+@import './components/nav';
+@import './components/pullout';
+
+// Global stylings
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: $pale-grey;
+    font-family: 'Roboto', arial;
+    font-weight: 300;
+    letter-spacing: 0.42px;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hide {
+    display: none;
+}
+
+.abs {
+    position: absolute;
+}
+
+.rel {
+    position: relative;
+}
+
+.container {
+    margin-top: 80px;
+    margin-left: 232px;
+}
+
+
+$spinner-size: 80px;
+$border-size: 6px;
+
+.loading {
+    height: $spinner-size;
+    width: $spinner-size;
+    border-radius: 50%;
+    border-top: $border-size solid $red;
+    border-right: $border-size solid white;
+    border-bottom: $border-size solid white;
+    border-left: $border-size solid white;
+    animation: .5s load infinite linear;
+}
+
+@keyframes load {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

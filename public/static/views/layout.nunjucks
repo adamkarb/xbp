@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	{# Metadata #}
+
+	<title>
+		{% block PageTitle %}{% endblock %}
+	</title>
+
+	{% block MetaData %}{% endblock %}
+
+	{# Vendor Styles #}
+	<link rel="stylesheet" href="/css/normalize.css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" charset="utf-8">
+
+	{# Base css #}
+
+	{# Custom #}
+	{% block CSS %}{% endblock %}
+
+</head>
+<body>
+
+	<div class="container">
+
+		{% block Content %}{% endblock %}
+
+	</div>
+
+
+	{# Vendor scripts #}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	{# Only get placed on authenticated routes #}
+	{% block AuthScripts %}{% endblock %}
+
+	{% block Scripts %}{% endblock %}
+
+</body>
+</html>

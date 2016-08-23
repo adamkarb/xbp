@@ -1,0 +1,7 @@
+{% extends "./layout.nunjucks" %}
+
+{% block CSS %}{% endblock %}
+
+{% block Content %}{% endblock %}
+
+{% block Scripts %}{% endblock %}
