@@ -42,7 +42,7 @@
 
 	// Configure routes
 	app.use( '/', viewRoutes );
-	app.use( '/api', apiAuthRoutes );
+	app.use( '/api', apiRoutes );
 
     // Configure Error Handling
 	app.all( '*' , ( req , res , next ) => {
@@ -51,12 +51,12 @@
 
 		// DEPENDING ON API OR VIEW, RENDER 404 OR SEND 404
 
-		res.render( '404' );
+		// res.render( '404' );
 
-	    // res.send({
-		// 	'status': res.statusCode,
-		// 	'message': 'No resource exists at this route.'
-		// });
+	    res.send({
+			'status': res.statusCode,
+			'message': 'No resource exists at this route.'
+		});
 
 	});
 
