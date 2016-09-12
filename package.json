@@ -1,13 +1,21 @@
 {
-  "name": "",
+  "name": "xbp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
-    "server": "nodemon -L server.js | lolcat"
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamkarb/xbp.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {}
+  "bugs": {
+    "url": "https://github.com/adamkarb/xbp/issues"
+  },
+  "homepage": "https://github.com/adamkarb/xbp#readme"
 }

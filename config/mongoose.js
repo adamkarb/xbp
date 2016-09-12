@@ -12,19 +12,19 @@
 
 	mongoose.connection.on( 'connecting' , () => {
 
-	    console.log( `Establishing connection with mongo database @ ${MONGO_HOST}` );
+	    console.log( `:: Establishing connection with mongo database @ ${MONGO_HOST} ::` );
 
 	});
 
 	mongoose.connection.on( 'connected' , () => {
 
-	    console.log( `Connected with mongo database @ ${MONGO_HOST}` );
+	    console.log( `:: Connected with mongo database @ ${MONGO_HOST} ::` );
 
 	});
 
 	mongoose.connection.on( 'error' , ( err )=>{
 
-	    console.log( `Error with mongo database @ ${MONGO_HOST}` );
+	    console.log( `:: Error with mongo database @ ${MONGO_HOST} ::` );
 	    console.log(err.stack);
 
 	});

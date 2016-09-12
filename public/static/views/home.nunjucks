@@ -1,7 +1,15 @@
 {% extends "./layout.nunjucks" %}
 
-{% block CSS %}{% endblock %}
+{% block CSS %}
 
-{% block Content %}{% endblock %}
+    <link rel="stylesheet" href="/css/home.css">
+
+{% endblock %}
+
+{% block Content %}
+
+    <h1>Welcome to XBP</h1>
+
+{% endblock %}
 
 {% block Scripts %}{% endblock %}
