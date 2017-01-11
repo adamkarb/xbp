@@ -12,18 +12,18 @@ var paths = {
     css: `${PUBLIC}/static/css`
 };
 
-gulp.task( 'styles', () => {
+gulp.task('styles', () => {
 
-    return gulp.src( paths.scss.compileReady )
-    .pipe( maps.init() )
-    .pipe( sass() )
-    .pipe( maps.write() )
-    .pipe( gulp.dest( paths.css ) );
+    return gulp.src(paths.scss.compileReady)
+    .pipe(maps.init())
+    .pipe(sass())
+    .pipe(maps.write())
+    .pipe(gulp.dest(paths.css));
 
 });
 
-gulp.task( 'watch', ['styles'], () => {
+gulp.task('watch', ['styles'], () => {
 
-    gulp.watch( paths.scss.all, ['styles'] );
+    gulp.watch(paths.scss.all, ['styles']);
 
 });
