@@ -1,31 +1,21 @@
 'use strict';
 
-const REDIS_HOST = process.env.REDIS_CLOUD_HOST || process.env.REDIS_HOST || '127.0.0.1';
-const REDIS_PORT = process.env.REDIS_CLOUD_PORT || process.env.REDIS_PORT || 6379;
-const REDIS_PW = process.env.REDIS_CLOUD_PW || process.env.REDIS_PW || null;
+const REDIS_URL = process.env.REDISCLOUD_URL || process.env.REDIS_URL;
 
-var promiseBinding = require("q").Promise;
-var redisPromise = require('promise-redis')(promiseBinding);
-var redisOpts = {
-	host: REDIS_HOST,
-	port: REDIS_PORT
-};
+var redisPromise = require('promise-redis')();
 
-if (REDIS_PW) { redisOpts.password = REDIS_PW; }
+var redis = redisPromise.createClient(REDIS_URL);
 
-var redis = redisPromise.createClient(redisOpts);
+redis.on('error' , (err) => {
 
-redis.on('error' , (err)=>{
-
-	console.log(`an error has occurred with the redis database connection: ${err.stack}`);
+	console.log(`An error has occurred with the redis database connection: ${err.stack}`);
 
 });
 
-redis.on('ready' , ()=>{
+redis.on('ready' , () => {
 
-	console.log(`:: Connected to redis database @ port ${REDIS_PORT} ::`);
+	console.log(`:: Connected to redis database @ ${REDIS_URL} ::`);
 
 });
 
 module.exports = redis;
-

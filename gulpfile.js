@@ -1,8 +1,10 @@
+'use strict';
+
+const PUBLIC = `${__dirname}/public`;
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var maps = require('gulp-sourcemaps');
-
-var PUBLIC = `${__dirname}/public`;
 
 var paths = {
     scss: {

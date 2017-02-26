@@ -3,7 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "body-parser": "1.16.1",
+    "cookie-parser": "1.4.3",
+    "dotenv": "4.0.0",
+    "express": "4.14.1",
+    "mongoose": "4.8.4",
+    "nunjucks": "3.0.0",
+    "promise-redis": "0.0.5",
+    "redis-promise": "0.1.0",
+    "winston": "2.3.1"
+  },
   "devDependencies": {},
   "scripts": {
     "start": "node server.js"
@@ -12,8 +22,8 @@
     "type": "git",
     "url": "git+https://github.com/adamkarb/xbp.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Adam Karbiener",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/adamkarb/xbp/issues"
   },

@@ -15,9 +15,8 @@ var fileTransport = new winston.transports.File({
 });
 
 var Logger = new winston.Logger({
-    'transports': [ fileTransport ] ,
+    'transports': [ fileTransport ],
     'exitOnError': false
 });
 
 module.exports = Logger;
-
