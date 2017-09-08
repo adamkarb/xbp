@@ -30,7 +30,11 @@ mongoose.connection.on('error', (err) => {
 
 mongoose.connection.on('disconnected', () => {
 
-    connect(MONGO_HOST, mongooseOptions);
+    setTimeout(() => {
+
+        connect(MONGO_HOST, mongooseOptions);
+
+    }, 1000);
 
 });
 
